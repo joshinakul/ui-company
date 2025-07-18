@@ -94,8 +94,8 @@ const Solutions = () => {
   );
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <div className="">
+      {/* <Header /> */}
       
       <main>
         {/* Hero */}
@@ -198,7 +198,7 @@ const Solutions = () => {
         </section>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
