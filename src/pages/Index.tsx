@@ -4,12 +4,14 @@ import { HeroSection } from "@/components/HeroSection";
 import { EnterpriseServiceCard } from "@/components/EnterpriseServiceCard";
 import { Button } from "@/components/ui/button";
 import { Brain, Database, Settings, Cloud, ArrowRight, Shield, Zap, Globe } from "lucide-react";
+import Solutions from "./Solutions";
 
 const Index = () => {
   const coreServices = [
     {
       title: "Enterprise AI Solutions",
-      description: "Deploy AI-powered automation, intelligent document processing, and predictive analytics to drive operational efficiency and strategic decision-making for enterprise workflows.",
+      description: "Deploying AI-powered automation, intelligent document processing, and predictive analytics to drive operational efficiency and strategic decision-making for enterprise workflows. \
+Our Enterprise AI solutions include custom AI model development, natural language processing, computer vision, and advanced analytics tailored to your business needs. We ensure seamless integration, robust security, and ongoing optimization for maximum ROI.",
       features: [
         "Industry-specific AI agent suites",
         "Computer vision analytics platform", 
@@ -21,7 +23,8 @@ const Index = () => {
     },
     {
       title: "Data Engineering Accelerators",
-      description: "Build enterprise data lakes, real-time analytics pipelines, and governance frameworks that transform your organization's data into competitive business intelligence.",
+      description: "Building enterprise data lakes, real-time analytics pipelines, and governance frameworks that transform your organization's data into competitive business intelligence. \
+We design and implement scalable data architectures, ETL pipelines, and data governance strategies. Our expertise covers cloud data warehousing, real-time streaming, and compliance to empower data-driven decision-making.",
       features: [
         "Modern data lakehouse accelerators",
         "Real-time data ingestion frameworks",
@@ -33,7 +36,8 @@ const Index = () => {
     },
     {
       title: "LLMOps & DevOps Solutions",
-      description: "End-to-end operationalization of large language models, machine learning workflows, and DevOps practices with enterprise governance and auditability.",
+      description: "End-to-end operationalization of large language models, machine learning workflows, and DevOps practices, including deployment, monitoring, CI/CD for ML, and governance for scalable, responsible AI in production. \
+Our LLMOps & DevOps services automate the ML lifecycle, from model training and deployment to monitoring and governance. We implement CI/CD for ML, MLOps best practices, and robust infrastructure for reliable, scalable AI operations.",
       features: [
         "Unified LLMOps platform lifecycle",
         "Automated prompt management & A/B testing",
@@ -45,7 +49,8 @@ const Index = () => {
     },
     {
       title: "Infrastructure Services",
-      description: "Implement enterprise-ready cloud-native architectures, containerization, and infrastructure automation with security, compliance, and scalability.",
+      description: "Implementing enterprise-ready cloud-native architectures, containerization, and infrastructure automation with security, compliance, and scalability at the forefront. \
+We architect and manage secure, scalable cloud and on-premise infrastructure. Our services include container orchestration, infrastructure as code, disaster recovery, and continuous monitoring for operational excellence.",
       features: [
         "Cloud landing zone accelerators",
         "Infrastructure-as-Code factories",
@@ -82,6 +87,7 @@ const Index = () => {
       <main>
         {/* Hero Section */}
         <HeroSection />
+        
 
         {/* Core Services Section */}
         <section className="py-24 bg-gradient-section">
@@ -103,6 +109,42 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-24 bg-enterprise-light">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-enterprise-primary mb-4">
+                TechOps Service Lifecycle
+              </h2>
+              <p className="text-xl text-gray-600">Our comprehensive approach spans the full service journey, from collaborative sales engagement to solution design, contract setup, and final delivery.
+Each phase is clearly owned—whether by our team, our partners, or through close collaboration—ensuring accountability and a seamless experience from start to finish.
+This integrated lifecycle ensures seamless, end-to-end service delivery across all stakeholder touchpoints.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {[
+                { title: "SALES", content: ["Lead Generation","Discovery","Lead Qualification","Initial Proposal","Commercial Finalisation"] },
+                { title: "PRESALES", content: ["Technical Discovery","Solution Design", "Proposal Finalization","Proof of Concept","Stakeholder Workshops"] },
+                { title: "LEGAL & FINANCE", content: ["Contract Review","Legal Negotiation","Agreement Execution","Credit Approval","Purchase Order"] },
+                { title: "DELIVERY", content: ["Project Initiation","SDLC","User Training","Hypercare & Support","Continuous Improvement"] }
+              ].map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-white p-6 rounded-lg shadow-md mb-4">
+                    <h3 className="font-bold text-enterprise-primary text-lg mb-2">{step.title}</h3>
+                    {step.content.map((cnt,idx)=>{
+                      return <p className="text-sm text-gray-600 mb-3">{cnt}</p>
+                    })}
+                    
+                  </div>
+                  {index < 3 && (
+                    <ArrowRight className="h-6 w-6 text-gray-400 mx-auto hidden md:block" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        <Solutions />
 
         {/* Process Section */}
         <section className="py-24 bg-enterprise-light">
