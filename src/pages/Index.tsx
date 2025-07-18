@@ -82,7 +82,7 @@ We architect and manage secure, scalable cloud and on-premise infrastructure. Ou
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      {/* <Header /> */}
       
       <main>
         {/* Hero Section */}
